@@ -1,8 +1,10 @@
+'use client'
+
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useMutation } from '@tanstack/react-query'
-import { Link } from 'react-router-dom'
-import { registerUser, RegisterData } from '../api/auth'
+import Link from 'next/link'
+import { registerUser, RegisterData } from '../../lib/api'
 
 interface SignUpForm {
     email: string
@@ -10,7 +12,7 @@ interface SignUpForm {
     confirmPassword: string
 }
 
-export default function SignUp() {
+export default function SignUpPage() {
     const [successMessage, setSuccessMessage] = useState<string>('')
     const {
         register,
@@ -145,11 +147,11 @@ export default function SignUp() {
                 <div className="mt-6 text-center">
                     <p className="text-sm text-gray-600">
                         Already have an account?{' '}
-                        <Link to="/login" className="font-medium text-indigo-600 hover:text-indigo-500">
+                        <Link href="/login" className="font-medium text-indigo-600 hover:text-indigo-500">
                             Login
                         </Link>
                     </p>
-                    <Link to="/" className="block mt-4 text-sm text-gray-500 hover:text-gray-700">
+                    <Link href="/" className="block mt-4 text-sm text-gray-500 hover:text-gray-700">
                         Back to Home
                     </Link>
                 </div>

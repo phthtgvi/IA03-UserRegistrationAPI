@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = process.env.VITE_API_URL;
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 const api = axios.create({
   baseURL: API_URL,
@@ -25,6 +25,7 @@ export interface RegisterResponse {
 export const registerUser = async (
   data: RegisterData
 ): Promise<RegisterResponse> => {
+  console.log("API_URL:", API_URL);
   const response = await api.post<RegisterResponse>("/user/register", data);
   return response.data;
 };

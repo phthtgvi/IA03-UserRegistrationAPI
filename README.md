@@ -1,38 +1,5 @@
 # IA03 - User Registration API with React Frontend
 
-A complete User Registration System built with NestJS backend and React frontend.
-
-## Tech Stack
-
-### Backend
-
-- NestJS
-- TypeORM
-- PostgreSQL
-- bcrypt (password hashing)
-- class-validator (validation)
-
-### Frontend
-
-- React 18
-- Vite
-- TypeScript
-- Tailwind CSS
-- React Hook Form
-- React Query (@tanstack/react-query)
-- React Router DOM
-
-## Features
-
-- User registration with email and password
-- Password hashing using bcrypt
-- Email validation and duplicate checking
-- Form validation with React Hook Form
-- API state management with React Query
-- Responsive UI with Tailwind CSS
-- Error handling and user feedback
-- CORS enabled for frontend-backend communication
-
 ## Prerequisites
 
 Before running this project, make sure you have:
@@ -111,72 +78,6 @@ npm run dev
 
 The frontend will run on `http://localhost:5173`
 
-## API Endpoints
-
-### POST /user/register
-
-Register a new user.
-
-**Request Body:**
-
-```json
-{
-  "email": "user@example.com",
-  "password": "password123"
-}
-```
-
-**Success Response (201):**
-
-```json
-{
-  "message": "User registered successfully",
-  "user": {
-    "email": "user@example.com",
-    "createdAt": "2024-01-01T00:00:00.000Z"
-  }
-}
-```
-
-**Error Responses:**
-
-- 409: Email already exists
-- 400: Validation error
-- 500: Internal server error
-
-## Project Structure
-
-```
-IA03-UserRegistrationAPI/
-├── server/
-│   ├── src/
-│   │   ├── user/
-│   │   │   ├── dto/
-│   │   │   │   └── register.dto.ts
-│   │   │   ├── user.controller.ts
-│   │   │   ├── user.service.ts
-│   │   │   ├── user.entity.ts
-│   │   │   └── user.module.ts
-│   │   ├── app.module.ts
-│   │   └── main.ts
-│   ├── package.json
-│   └── tsconfig.json
-│
-└── client/
-    ├── src/
-    │   ├── api/
-    │   │   └── auth.ts
-    │   ├── pages/
-    │   │   ├── Home.tsx
-    │   │   ├── Login.tsx
-    │   │   └── SignUp.tsx
-    │   ├── App.tsx
-    │   ├── main.tsx
-    │   └── index.css
-    ├── package.json
-    └── vite.config.ts
-```
-
 ## Usage
 
 1. Open your browser and navigate to `http://localhost:5173`
@@ -236,16 +137,3 @@ The application provides clear error messages for:
 - Email already registered
 - Network errors
 - Server errors
-
-## Future Enhancements
-
-- User authentication (login functionality)
-- JWT token-based authentication
-- Password reset functionality
-- Email verification
-- User profile management
-- Session management
-
-## License
-
-MIT

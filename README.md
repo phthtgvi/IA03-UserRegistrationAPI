@@ -86,7 +86,7 @@ npm install
 Create a `.env` file in the client directory (optional):
 
 ```env
-VITE_API_URL=http://localhost:3000
+NEXT_PUBLIC_API_URL=http://localhost:3000
 ```
 
 ## Running the Application
